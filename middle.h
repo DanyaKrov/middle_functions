@@ -7,6 +7,9 @@
 
 void itc_num_print(int number);
 int itc_len_num(long long number);
+int itc_sum_num(long long number);
+int itc_multi_num(long long number);
+int itc_max_num(long long number);
 
 using namespace std;
 
