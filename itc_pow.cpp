@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int itc_pow(int number, int number2)
+long long itc_pow(int number, int number2)
 {
     int num = 1;
     while (number > 0){
