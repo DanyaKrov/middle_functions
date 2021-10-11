@@ -10,5 +10,5 @@ int itc_len_num(long long number)
         kol_10 += 1;
         number /= 10;
     }
-    return kol_10;
+    return kol_10 + 1;
 }
