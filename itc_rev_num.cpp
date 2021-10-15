@@ -5,7 +5,7 @@ using namespace std;
 
 int itc_rev_num(long long number)
 {
-    if (number >= 9223372036854775807 || number >= -9223372036854775808)
+    if (number == 9223372036854775808 || number == -9223372036854775809)
         return -1;
     if (number < 0)
         number *= -1;
