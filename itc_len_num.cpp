@@ -9,7 +9,7 @@ int itc_len_num(long long number)
         number *= -1;
     int kol_10 = 0;
     while (number >= 10){
-        kol_10 += 1;
+        kol_10 ++;
         number /= 10;
     }
     return kol_10 + 1;
