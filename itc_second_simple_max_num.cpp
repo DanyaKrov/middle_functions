@@ -5,17 +5,18 @@ using namespace std;
 
 int itc_second_simple_max_num(long long number)
 {
-    int max = itc_max_num(number);
-    int kol_max = 0;
-    int max1 = -100;
-    while (number >= 10){
-        if (max1 < number % 10 && number % 10 != max)
-            max1 = number % 10;
-        number /= 10;
-        if (max1 == max)
-            kol_max++;
+    if (number < 0)
+        number *= -1;
+    if (itc_len_num(number) == 1)
+        return -1;
+    int x = itc_max_num(number);
+    for (long long i = 1; i < number * 10; i *= 10) {
+        if (number % (i * 10) / i == x) {
+            number -= x * i;
+            if (x == itc_max_num(number))
+                return -1;
+            else
+            return itc_max_num(number);
+        }
     }
-    if (kol_max >= 2)
-        max1 = -1;
-    return max1;
 }
