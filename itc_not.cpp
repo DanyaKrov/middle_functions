@@ -9,7 +9,7 @@ long long itc_not(long long num, int type)
     int i = 0;
     while (num > type - 1){
             if (num % type != 0)
-                NumInTw = (num % type) * itc_pow(i, 10);
+                NumInTw += (num % type) * itc_pow(i, 10);
             num /= type;
             i++;
         }
